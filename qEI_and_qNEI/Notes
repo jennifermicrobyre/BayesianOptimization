@@ -1,0 +1,48 @@
+
+Step 1:
+RWU_initialization_part_1
+(a) generate starting conditions given appropriate bounds
+(b) save as a csv file
+
+Step 2:
+(a) open csv file and adjust the values to round resistance to nearest 50 Ohms
+(b) save csv file
+
+Step 3:
+RWU_initialization_part_2
+(a) open csv file
+(b) convert to tensor using pytorch
+(c) save tensor as train_x and train_x_all
+
+Step 4:
+(a) run experiment, using train_x as inputs, and collect data
+
+Step 5:
+RWU_initialization_part3
+***remember to change bounds***
+(a) create csv file with colony counts
+(b) open csv file (train_obj) with colony counts
+(c) convert to tensor using pytorch
+(d) save tensor as train_obj and train_obj_all
+(e) open train_x and train_x_all tensors
+(f) generate new conditions to test experimentally
+(g) save new conditions, train_x, as csv & tensor
+(h) add new conditions to train_x_all and save
+
+Step 6:
+(a) run experiment, using train_x as inputs, and collect data
+
+Step 7:
+RWU_run_optimization
+***remember to change bounds***
+(a) create csv file with colony counts
+(b) open csv file with colony counts
+(c) convert to tensor using pytorch
+(d) save tensor as train_obj
+(e) update train_obj_all with train_obj
+(f) load train_x_all
+(g) generate new conditions to test experimentally
+(h) save new conditions, train_x, as csv & tensor
+(i) add new conditions to train_x_all and save
+
+repeat steps 6 & 7 until done
